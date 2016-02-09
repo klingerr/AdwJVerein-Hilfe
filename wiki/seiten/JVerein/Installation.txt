@@ -1,0 +1,18 @@
+{{parent:/JVerein-Hilfe}}
+Inhaltsverzeichnis
+{{toc}}
+
+= Installation
+== Voraussetzung
+* Java min. Version 1.7
+
+== Windows
+* Prüfen Betriebssystem auf 32- oder 64-Bit (Start > Systemsteuerung > System: Systemtyp)
+* Doppelklick auf "C:\Pfad zu Download\jre-8u31-windows-x64.exe" und Installationsassisten folgen
+* Doppelklick auf "C:\ralf\privat\Segeln\JVerein\Software\jameica-2.7.0-nightly-win64.zip" und Installationsassisten folgen
+* Anklicken der Datei "C:\Pfad zu\JVerein\jameica\jameica-win64.exe"
+* notwendige Plugins installieren unter "Datei > Einstellungen > Plugins"
+  * hibiscus-2.7.0-nightly.zip
+  * jverein.2.8.3-500.zip
+
+== Linux

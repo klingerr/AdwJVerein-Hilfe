@@ -1,0 +1,23 @@
+{{parent:/JVerein-Hilfe}}
+
+= Allgemeines Vorgehen
+
+@@
+                  nach 1 Jahr Rückzahlung Kaution
+                  Eintritt            Austritt
+                  |                   |
+                  v                   v
+|---|---|---|---|---|---|---|---|---|---|---|---|--->
+|Jan|Feb|Mrz|Apr|Mai|Jun|Jul|Aug|Sep|Okt|Nov|Dez|Jan
+      ^   ^ ^  Zahlungseingänge   ^ ^  Zahlungseingänge
+      |   | |                     | |  
+      |   | Zahlungstermin        | Zahlungstermin
+      |   Abrechnungslauf         Abrechnungslauf
+      Arbeitstunden erfassen
+@@
+
+* Mitgliedsbeiträge werden halbjährlich zum 1.4. und zum 1.10. gezahlt. Die Beiträge gelten jeweils für das 1. bzw. das 2. Halbjahr, d.h. vom 1.1. bis zum 30.6. sowie vom 1.7. bis zum 31.12..
+* Vor jeder Abrechnung muss in JVerein ein Abrechnungslauf durchgeführt werden. Damit werden aus den Mitgliedsbeiträgen und den Umlagen SOLL-Buchungen erstellt. Diesen SOLL-Buchungen werden die Einzahlungen des Mitglieds über den Import der Kontoauszüge zugeordnet.
+* Der Eintritt eines Mitglieds kann zu jedem Monatsbeginn erfolgen. Der erste Abrechnungslauf für das neue Mitglied erfolgt erst mit der nächsten regulären Abrechnung. ''Hinweis:'' Sollte der Eintritt nach dem Abrechnungslauf des Halbjahres erfolgt sein, so müssen die SOLL-Buchungen des darauf folgenden Halbjahres manuell erhöht werden.
+* Jedes erwachsene Mitglied muss einen Jahresbeitrag als Kaution bezahlen. Die Kaution wird nach einem Jahr zurück gezahlt, sofern keine Außenstände existieren.
+* Mit der Abrechnung des 1. Halbjahres werden auch die Arbeitsstunden abgerechnet. 

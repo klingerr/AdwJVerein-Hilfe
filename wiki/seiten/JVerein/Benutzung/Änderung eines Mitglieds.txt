@@ -1,0 +1,15 @@
+{{parent:/JVerein/Benutzung}}
+Inhaltsverzeichnis
+{{toc}}
+
+= Änderung eines Mitglieds
+== Änderung einer Beitragsgruppe
+* bei Verringerung des Beitrags: 
+  * Änderung der Beitragsgruppe im Tab "Mitgliedschaft"
+  * bei unter-jährlicher Änderung zzgl. einmaligen Zusatzbetrag für Beginn des Halbjahres bis Beginndatum erstellen
+* bei Erhöhung des Beitrags: 
+  * "zukünftige Beitragsgruppen" im Tab "Mitgliedschaft" Klick mit rechter Maustaste in das gleichnamige Feld anlegen mit "Beginndatum=1. des Folgehalbjahrs"
+  * bei unter-jährlicher Änderung zzgl. einmaligen Zusatzbetrag für Beginndatum bis Ende des Halbjahres erstellen
+
+== Änderung von Umlagen
+* bestehende Umlage im Tab "Zusatzbeträge" des Mitglieds öffnen und Endedatum

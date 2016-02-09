@@ -1,4 +1,19 @@
 {{parent:/JVerein-Hilfe}}
+Inhaktsverzeichnis
+{{toc}}
 
 = Einstellungen
+* befinden sich im linken Baum unter "Administration > Einstellungen"
+
+== Abrechnungsmodell
+* Beitragsmodell Auswahl: monatlich mit monatl., viertel-, halb- oder jährlicher Zahlungsweise zu fixen Terminen
+* Standardzahlungsrhytmus Auswahl: halbjährlich
+* Standard-Zahlungsweg Auswahl: Überweisung
+
+== Anzeigen von Tabs am Mitglied
+* Aktivieren der Checkbox "Arbeitseinsätze"
+* Aktivieren der Checkbox "Lesefelder"
+* Aktivieren der Checkbox "Zusatzbeträge anzeigen"
+* Aktivieren der Checkbox "Wiedervorlage anzeigen (optional)"
+
 == [[/JVerein/Einstellungen/Beitragsgruppen]]

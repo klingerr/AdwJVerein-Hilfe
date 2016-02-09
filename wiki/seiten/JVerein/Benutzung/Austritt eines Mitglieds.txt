@@ -13,8 +13,8 @@ Zuerst müssen das Kündigungsdatum und das Austrittsdatum erfasst werden, durch
 
 == Korrektur der Soll-Buchungen
 Gemäß [[file:/JVerein/Files/beitragsordnung_2014.pdf|Beitragsordnung]] gelten folgende Kündigungsfristen:
-* Senioren: einen Monat zum Quartalsende
-* Kinder: einen Monat zum Monatsende
+* Senioren: einen Monat zum ''Quartalsende''
+* Kinder: einen Monat zum ''Monatsende''
 
 Aufgrund der halbjährlichen Zahlungsweise muss evtl. eine Korrektur der vorliegenden Soll-Buchungen erfolgen durch:
 

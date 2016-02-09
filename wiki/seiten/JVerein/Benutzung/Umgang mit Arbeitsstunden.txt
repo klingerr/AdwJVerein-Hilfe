@@ -28,3 +28,5 @@ Die Anzahl der Arbeitsstunden sowie die Betrag für nicht geleistete Arbeitsstun
 == Erstellen der Arbeitsstundenblätter
 
 == Abrechnung der geleisteten Arbeitsstunden
+* im Tab "Arbeitseinsatz" eintragen der geleisteten Arbeitsstunden
+* für den Abrechnungslauf zum 1.4. müssen im Menü "Arbeisteinsätze prüfen" mit dem Button "Zusatzbeträge generieren" die Sanktionen für nicht geleistete Arbeitsstunden generiert werden

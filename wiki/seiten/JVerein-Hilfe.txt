@@ -5,6 +5,7 @@
 = Glossar
 
 = Inhaltsverzeichnis
+== [[JVerein/Allgemeines Vorgehen]]
 == [[JVerein/Starten]]
 == [[JVerein/Benutzung]]
 === [[JVerein/Benutzung/Aufnahme eines neuen Mitglieds]]
@@ -21,7 +22,7 @@
 == [[file:/JVerein/Files/beitragsordnung_2014.pdf|Beitragsordnung]]
 === Ergänzungen zur Beitragsordnung:
 * Die Kündigungsfrist bei Kindern beträgt ''1 Monat''.
-* Für Frauen wird eine niedrigere Anzahl an Arbeitsstunden festgelegt.
+* Für Frauen wird vom Vorstand jedes Jahr eine niedrigere Anzahl an Arbeitsstunden festgelegt.
 == [[file:/JVerein/Files/geschaeftsordnung.pdf|Geschäftsordnung]]
 == [[file:/JVerein/Files/satzung.pdf|Satzung]]
 
