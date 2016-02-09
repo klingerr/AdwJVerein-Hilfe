@@ -1,0 +1,14 @@
+{{parent:/JVerein-Hilfe}}
+
+= JVerein-Benutzung
+
+Die Benutzung von JVerein gliedert sich in folgende Teile:
+
+== [[/JVerein/Benutzung/Aufnahme eines neuen Mitglieds]]
+
+== [[/JVerein/Benutzung/Änderung eines Mitglieds]]
+
+== [[/JVerein/Benutzung/Austritt eines Mitglieds]]
+
+== [[/JVerein/Benutzung/Halbjährliche Abrechnung]]
+

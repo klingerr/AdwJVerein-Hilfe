@@ -1,0 +1,74 @@
+{{parent:/JVerein/Benutzung}}
+Inhaltsverzeichnis
+{{toc}}
+
+= Austritt eines Mitglieds
+== Eintragen der Datümer
+Zuerst müssen das Kündigungsdatum und das Austrittsdatum erfasst werden, durch:
+* Aufruf des Mitglieds, z.B. über die Schnellsuche
+* Klick auf Reiter "Mitgliedschaft"
+* Eintragen des Kündigungsdatums
+* Eintragen des Austrittsdatums
+* Klick auf Button "Speichern"
+
+== Korrektur der Soll-Buchungen
+Gemäß [[file:/JVerein/Files/beitragsordnung_2014.pdf|Beitragsordnung]] gelten folgende Kündigungsfristen:
+* Senioren: einen Monat zum Quartalsende
+* Kinder: einen Monat zum Monatsende
+
+Aufgrund der halbjährlichen Zahlungsweise muss evtl. eine Korrektur der vorliegenden Soll-Buchungen erfolgen durch:
+
+* Aufruf des Mitglieds, z.B. über die Schnellsuche
+* Klick auf Reiter "Mitgliedskonto"
+* Klick mit rechter Maustaste auf zu korrigierende Buchung
+* Klick mit linker Maustaste auf Menüpunkt "Sollbuchung bearbeiten"
+* Betrag ändern
+* Verwendungszweck um Beschreibung erweitern, z.B. "anteilig für 3 Monate"
+* Klick auf Button "Speichern"
+
+== Kontrolle des Kontostands
+Das Mitglied muss evtl. bestehende Forderungen begleichen oder bekommt ein evtl. vorhandenes Guthaben ausgezahlt. ''Guthaben < 2,00€ werden automatisch als Spende verbucht und Forderungen < 1,00 € werden nicht eingefordert.'' 
+
+Eine evtl. bestehende Differenz des Kontostandes des austretenden Mitglieds muss ermittelt und dokumentiert werden durch:
+* Aufruf des Mitglieds, z.B. über die Schnellsuche
+* Klick auf Reiter "Mitgliedskonto"
+* Bei einer Differenz ganz rechts oben muss im Tab "Vermerke" im Feld "Vermerk 1" folgender Text eingegeben werden: 
+  * Bei einem Guthaben > 2,00€: ''Ihr Guthaben beträgt AB,XY €. Zur Rückzahlung benötigen wir Ihre Bankverbindung. Sollten wir innerhalb von 14 Tagen keine Information von Ihnen erhalten, erlauben wir uns, den Betrag als Spende zu verbuchen.''
+  * Bei einer Forderung > 1,00 €: ''Die aktuell offene Forderung beträgt AB,CD €. Wir bitten um Überweisung innerhalb von 14 Tagen.''
+* Klick auf Button "Speichern"
+== Erfassen der Mahngebühren
+Mahnungen werden durch den Finanzvorstand versendet. Er muss entweder eine entsprechende Information geben oder bei einer Zuvielzahlung von 2,00 € oder 6,00 € (Mahngebühren: 1. Mahnung = 2,00 €, je weiterer Mahnung = 4,00 €) handelt es sich i.d.R. ebenfalls um eine Mahngebühr, die nachträglich erfasst werden muss durch:
+
+* Aufruf des Mitglieds, z.B. über die Schnellsuche
+* Klick auf Reiter "Mitgliedskonto"
+* Klick mit rechter Maustaste auf den Namen links oben in der Tabelle
+* Klick mit linker Maustaste auf Menüpunkt "neue Sollbuchung"
+* Im Feld "Datum" Eingabe des heutigen Datums
+* Im Feld "Verwendungszweck 1" Eingabe des Texts "Mahngebühr"
+* Im Feld "Betrag" Eingabe von "2,00"
+* Klick auf Button "Speichern"
+
+== Erzeugung der Austrittsdokumente
+Dem ausscheidenden Mitglied werden eine Austrittsbestätigung und ein aktuelles Datenblatt durch den Finanzvorstand übermittelt. 
+
+=== Erzeugung der Austrittsbestätigung
+* Klick auf den Menüpunkt "JVerein > Mitglieder"
+* Auswahl der Mitgliedschaft "Abgemeldet"
+* Im Feld "Name" Eingabe des Nachnamens (teilweise Eingabe ist ausreichend)
+* Suche auslösen durch Verlassen des Feldes, z.B. durch Drücken der Tab-Taste
+* Klick mit rechter Maustaste auf die Ergebniszeile des ausscheidenden Mitglieds
+* Klick mit linker Maustaste auf den Menüpunkt "Austrittsbestätigung Senioren" bzw. "Austrittsbestätigung Kinder"
+* Auswahl des Zielordners, z.B. JVerein\doc\Mitglieder\2015\Kündigungen
+* Eingabe eines sinnvollen Dateinamens, z.B. Name-Vorname_Austritt_Datum.pdf
+* Klick auf Button "OK"
+
+=== Erzeugung des Datenblatts
+* Klick auf den Menüpunkt "JVerein > Mitglieder"
+* Auswahl der Mitgliedschaft "Abgemeldet"
+* Im Feld "Name" Eingabe des Nachnamens (teilweise Eingabe ist ausreichend)
+* Suche auslösen durch Verlassen des Feldes, z.B. durch Drücken der Tab-Taste
+* Klick mit rechter Maustaste auf die Ergebniszeile des ausscheidenden Mitglieds
+* Klick mit linker Maustaste auf den Menüpunkt "Personalbogen drucken"
+* Auswahl des Zielordners, z.B. JVerein\doc\Mitglieder\2015\Kündigungen
+* Eingabe eines sinnvollen Dateinamens, z.B. Name-Vorname_Datenblatt_Datum.pdf
+* Klick auf Button "OK"

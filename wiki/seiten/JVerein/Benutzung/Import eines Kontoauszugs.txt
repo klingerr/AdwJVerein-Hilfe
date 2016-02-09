@@ -1,0 +1,103 @@
+{{parent:/JVerein/Benutzung}}
+Inhaltsverzeichnis
+{{toc}}
+
+= Import eines Kontoauszugs
+Die Zahlungseingänge der Mitglieder auf das AdW-Konto werden durch den Finanzvorstand (aktuell Udo Schmidt) als CSV-Datei geliefert. Diese Datei muss für den Import in JVerein umgewandelt werden.
+
+== Umwandlung der CSV-Datei
+''Hinweis:'' Um doppelte Importe zu vermeiden, sollte in JVerein unter "Buchführung > Buchungen" die letzte Buchung kontrolliert und nur neuere Zahlungen importiert werden.
+{{br}}
+
+* Öffnen der gelieferten CSV-Datei in Excel (oder LibreOffice)
+* Ändern des Namens des automatisch erstellten Tabellenblattes in "original"
+* Erstellen eines neuen Tabellenblattes "JVerein"
+* in der ersten Zeile folgende Spaltenüberschriften anlegen: buchung_betrag, buchung_datum, buchung_kontonummer, buchung_name, buchung_zweck1
+* zweite Zeile als Referenz auf die erste Datenzeile des originalen Tabellenblatt füllen, z.B.:
+** buchung_betrag: "=$original.H9" (Betrag (EUR))
+** buchung_datum: "=$original.A9" (Buchungstag)
+** buchung_kontonummer: "1020205645" (statisch für alle Zeilen)
+** buchung_name: "=$original.D9" (Auftraggeber / Begünstigter)
+** buchung_zweck1: "=$original.E9" (Verwendungszweck)
+* zweite Zeile markieren und nach unten so weit vervollständigen, wie Datensätze im originalen Datenblatt vorliegen (''Achtung:'' Die Kontonummer muss bei allen Zeilen identisch sein und darf nicht automatisch hochgezählt werden.)
+* Speichern der Daten als Excel-Datei durch:
+** Klick auf Menüpunkt "Datei > Speichern unter ..."
+** Erweitern des Dateinamens mit "_JVerein"
+** Auswahl des Dateiformats "Excel - XLSX"
+** Klick auf Button "Speichern"
+* Exportieren des Tabellenblattes "JVerein" durch:
+** Aktivieren des Tabellenblattes "JVerein"
+** Klick auf Menüpunkt "Datei > Speichern unter ..."
+** Auswahl des Dateiformats "Text - CSV"
+** Klick auf Button "Speichern"
+** Hinweis bestätigen, dass nicht alles gespeichert werden kann
+** Auswahl folgender Optionen:
+*** Zeichensatz: Windows-1252
+*** Feldtrenner: Semikolon
+** Klick auf Button "Speichern"
+
+Als Ergebnis sollten 3 Dateien existieren:
+# die originale CSV-Datei
+# eine Excel-Datei mit dem Namenszusatz "_JVerein.xlsx"
+# die umgewandelte CSV-Datei mit dem Namenszusatz "_JVerein.csv"
+
+== Import der umgewandelten CSV-Datei
+* Aufruf des JVerein-Menüpunkts "Buchführung > Buchungen"
+* Klick auf Button "Import"
+* Beibehalten der "Verfügbaren Formate" mit "CSV-Buchungsimport"
+* Bei der Selectbox "Encoding" Auswahl von "windows-1252"
+* Klick auf Button "Import starten"
+* Suchen der oben erzeugten CSV-Datei mit dem Namenszusatz "_JVerein.csv"
+* Klick auf Button "OK"
+
+''Hinweis 1:'' Es findet keine Prüfung auf Duplikate statt, d.h. diese Zahlungen werden doppelt importiert. Es muss manuell auf Vermeidung von Duplikaten geachtet werden, z.B. durch Löschen bereits vorhandener Zahlungen aus der Excel-Datei.
+''Hinweis 2:'' Die neu importierten Buchungen sind erst zu sehen, wenn man den "Buchführung > Buchungen" neu öffnet, d.h. erst Klick auf Menüpunkt "Buchführung > Konten" und dann erneut auf "Buchführung > Buchungen".
+
+== Zuordnung der importierten Buchungen zu den Mitgliedern
+''Hinweis:'' Alle Zahlungseingänge werden der Sollbuchung des Mitgliedsbeitrags des jeweiligen Mitglieds zugeorndet. Eine Aufteilung in die Zusatzbeträge (Liegeentgelt, Reinigung usw.) erfolgt nicht.
+{{br}}
+
+* Öffnen der Buchung ohne "Mitglied" und "Buchungsart" durch Doppelklick
+* Zuordnung der Sollbuchung des Mitglieds durch Klick auf Button "..." neben Mitgliedskonto
+* Auswahl des letzten Mitgliedsbeitrags
+* Klick auf Button "übernehmen"
+* Auswahl der Buchungsart "2110 - Echte Mitgliedsbeiträge bis 300 Euro"
+* Klick auf Button "Speichern"
+* Zurück zur Buchungsliste durch Klick auf Button "{{html}}&lt;{{/html}}=" rechts oben
+
+=== Zurodnungsregeln
+* Krangelder sollen nicht in JVerein verwaltet werden. Daher gibt es zwei Möglichkeiten:
+** Löschen der Buchung
+** Keine Zuordnung zum Mitglied, nur Buchungsart "Kranen" zuordnen, damit man sieht, dass die Buchung bearbeitet wurde.
+* Spenden werden ebenfalls nicht in JVerein verwaltet. Hier gilt das Gleiche wie oben, nur als Buchungsart ist "Spenden" auszuwählen.
+
+
+=== Splitbuchung
+Eine Splitbuchung wird notwendig, wenn:
+* ein Mitglied mit einer Überweisung Zahlungen für mehrere Mitglieder, z.B. Kinder, getätigt hat. Dann muss die Gesamtsumme auf die einzelnen Mitglieder aufgeteilt, also gesplittet werden. 
+* in der Überweisung ist zusätzlich zu den Beiträgen die Kaution enthalten.
+
+Eine Splitbuchung geschieht wie folgt:
+* Klick mit rechter Maustaste auf die Buchung
+* Klick mit linker Maustaste auf "Buchungsart zuordnen" (ist Voraussetzung für eine Splitbuchung)
+* Auswahl der Buchungsart "2110 - Echte Mitgliedsbeiträge bis 300 Euro"
+* Erneuter Klick mit rechter Maustaste auf die Buchung
+* Klick mit linker Maustaste auf "Splitbuchung"
+* Klick auf Button "neu"
+* Auswahl der Sollbuchung, z.B. Kaution
+* Auswahl der Buchungsart, z.B. "555 - Geleistete Kautionen"
+* Eingabe des Betrags der ausgewählten Sollbuchung in das Feld "Betrag"
+* Klick auf Button "Speichern"
+* Zurück zur Splitbuchung durch Klick auf Button "{{html}}&lt;{{/html}}=" rechts oben
+* Merken der unten angezeigten Differenz
+* Klick auf Button "neu"
+* Eingabe des gemerkten Betrags in das Feld "Betrag"
+* Auswahl der Sollbuchung, z.B. Mitgliedsbeitrag
+* Auswahl der Buchungsart, z.B. "2110 - Echte Mitgliedsbeiträge bis 300 Euro"
+* Klick auf Button "Speichern"
+* Zurück zur Splitbuchung durch Klick auf Button "{{html}}&lt;{{/html}}=" rechts oben
+* Als Differenz wird jetzt 0,00 EUR ausgewiesen
+* Klick auf Button "Speichern" (''GANZ WICHTIG'', sonst ist die Splitbuchung weg)
+* Zurück zur Buchungsliste durch Klick auf Button "{{html}}&lt;{{/html}}=" rechts oben
+
+''Hinweis:'' Um die Mitglieder nicht zu verwirren wird die originale Überweisung und die entsprechende Gegenbuchung dem Mitglied nicht zugeordnet. Somit tauchen sie auf seinem Datenblatt nicht auf.

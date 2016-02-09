@@ -1,0 +1,9 @@
+{{parent:/JVerein/Abfragen}}
+
+= Starten von Execute Query
+
+* Über das Startmenü:
+** Start > Alle Programme > Execute Query > Execute Query
+* Über den Windows-Explorer:
+** Doppelklick auf "C:\Program Files\ExecuteQuery\eq.exe" oder "C:\Program Files\ExecuteQuery\eq.jar"
+* innerhalb von Execute Query Auswahl der JVerein-Datenbank durch Doppelklick auf "JVerein" im Tab "Connections" auf der linken Seite

@@ -1,0 +1,22 @@
+{{parent:/JVerein-Hilfe}}
+Inhaltsverzeichnis
+{{toc}}
+
+= Weiterentwicklung für den AdW
+== Vorgenommene Änderungen
+* Serienmail zum Versand der Mitgliederdatenblätter per eMail
+* Layout der Mitgliederdatenblätter
+  * Anpassung an halbjährliche Zahlweise
+
+
+== Howto Entwicklung unter Linux
+=== Links
+* [[http://www.willuhn.de/wiki/doku.php?id=develop:eclipse]]
+* [[http://www.willuhn.de/wiki/doku.php?id=develop:jameica:faq]]
+
+=== SWT
+Für die Entwicklung unter Linux muss im Build-Path von Jameica die "swt.jar" gegen eine aus dem mitgelieferten Ordner "win32" ausgetauscht werden.
+
+''Wichtig:'' anschließend muss die ausgetauschte "swt.jar" im Tab "Order and Exports" freigegeben werden (checkbox aktivieren).
+
+* siehe: [[https://www.willuhn.de/bugzilla/show_bug.cgi?id=702]]

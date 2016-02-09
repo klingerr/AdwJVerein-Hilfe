@@ -1,0 +1,8 @@
+= Execute Query
+
+[[http://executequery.org/|Execute Query]] ist ein [[http://www.gnu.org/copyleft/gpl.html|freier]], auf [[https://de.wikipedia.org/wiki/Java_(Programmiersprache)|Java]] basierender [[https://de.wikipedia.org/wiki/Relationale_Datenbank|Datenbank]]-Client.
+
+== [[/JVerein/Abfragen/Execute Query/Installation]]
+== [[/JVerein/Abfragen/Execute Query/Starten]]
+== [[/JVerein/Abfragen/Execute Query/Erstkonfiguration (einmalig)]]
+== [[/JVerein/Abfragen/Execute Query/Abfrage ausführen]]

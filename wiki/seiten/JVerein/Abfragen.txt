@@ -1,0 +1,25 @@
+{{parent:/JVerein-Hilfe}}
+{{style:headline}}Abfragen{{/style}}
+
+Der Verein braucht eine Reihe von Abfragen. Leider lassen sich nur die wenigsten Abfragen direkt in [[wiki:startpage|JVerein]] realisieren.
+
+Aber [[wiki:startpage|JVerein]] nutzt eine [[https://de.wikipedia.org/wiki/Relationale_Datenbank|Datenbank]] und auf diese kann mit der Abfragesprache [[https://de.wikipedia.org/wiki/SQL|SQL]] zugegriffen werden.
+
+Am einfachsten gestaltet sich das über ein separates Programm. Hier wird dafür [[http://executequery.org/|Execute Query]] verwendet.
+
+= [[/JVerein/Abfragen/Execute Query]]
+== [[/JVerein/Abfragen/Execute Query/Installation]]
+== [[/JVerein/Abfragen/Execute Query/Starten]]
+== [[/JVerein/Abfragen/Execute Query/Erstkonfiguration (einmalig)]]
+== [[/JVerein/Abfragen/Execute Query/Abfrage ausführen]]
+
+= Verfügbare SQL-Abfragen (außerhalb von JVerein)
+== [[/JVerein/Abfragen/Verfügbare Abfragen/Aktueller Kontostand]] (aller Mitglieder)
+
+== [[/JVerein/Abfragen/Verfügbare Abfragen/Adressliste]]
+== [[/JVerein/Abfragen/Verfügbare Abfragen/Telefonliste]]
+== [[/JVerein/Abfragen/Verfügbare Abfragen/Vereinsstatistik]] (immer zum 31.12.)
+== [[/JVerein/Abfragen/Verfügbare Abfragen/Geburtstagsliste]] (TODO: siehe Access-Abfrage "Geburtstage alle"")
+
+= in JVerein vorhandene Reports
+== [[/JVerein/Abfragen/Verfügbare Abfragen/Leere Arbeitsstundenblätter]] (1 je arbeitsfähiges Mitglied, immer zum 1.3. erstellen)

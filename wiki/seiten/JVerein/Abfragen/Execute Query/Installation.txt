@@ -1,0 +1,16 @@
+{{parent:/JVerein/Abfragen/Execute+Query}}
+
+= Installation
+== Java installieren (sofern nicht vorhanden)
+* Prüfen des Vorhandenseins von Java:
+** Kommandofenster öffnen: Start > Alle Programme > Zubehör > Eingabeaufforderung
+** Eingabe des Befehls: @@java -version@@
+** wird eine Versaion >= 1.7 ausgegeben ist die Voraussetzung erfüllt
+* Download von Java min. Version 1.7 ([[https://java.com/de/download/|Download]])
+* Doppelklick auf "C:\Pfad zu Download\jre-8u31-windows-x64.exe" 
+* Installationsassisten folgen
+
+== Execute Query installieren
+* Download [[http://executequery.org/download|Execute Query]] - am besten die Version "Java installer - any OS"
+* Doppelklick auf "executequery-installer-v4.3.0.jar" 
+* Installationsassisten folgen

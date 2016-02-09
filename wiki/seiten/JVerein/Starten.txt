@@ -1,0 +1,19 @@
+{{parent:/JVerein-Hilfe}}
+= Starten von JVerein
+
+JVerein ist eine Erweiterung von [[http://www.willuhn.de/products/jameica/|Jameica]], daher muss folgendes Programm gestartet werden:
+
+@@
+"C:\Pfad zu jameica\jameica-win64.exe"
+@@
+
+Konkret sieht das z.B. so aus:
+
+@@
+C:\Users\Klinger\Documents\privat\Segeln\JVerein\jameica\jameica-win64.exe
+@@
+
+Anschließend erfolgt eine Passwortabfrage, das Passwort lautet:
+@@
+_adw2014!
+@@

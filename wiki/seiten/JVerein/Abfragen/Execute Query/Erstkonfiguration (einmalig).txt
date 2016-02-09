@@ -1,0 +1,21 @@
+{{parent:/JVerein/Abfragen}}
+
+= Erstkonfiguration (einmalig)
+== Treiber für die JVerein-Datenbank hinzufügen
+* in Execute Query den Tab "Drivers" anklicken
+* Klick auf Zahnradsymbol mit Titel "Add new JDBC driver" und Folgendes eingeben:
+** Name "JVerein-DB"
+** Database Auswahl "H2 Database Engine"
+** Klick auf Button "Add Library"
+** Path "C:\Pfad zu\jameica\lib\h2\h2.jar"
+** Klick auf Button "Select"
+
+== Datenbankverbindung zu JVerein erstellen
+* Klick auf Tab "Connections"
+* Klick auf Tonnensymbol mit Titel "New connection" und Folgendes eingeben:
+** Connection Name "JVerein"
+** User Name "jverein"
+** Password "jverein"
+** JDBC URL "jdbc:h2:C:/Pfad zu/JVerein/AdW/jverein/h2db/jverein"
+** JDBC Driver "JVerein-DB" (wie oben angelegt)
+** Speichern

@@ -1,0 +1,129 @@
+{{parent:/JVerein/Abfragen/Verfügbare Abfragen/Aktueller Kontostand}}
+{{toc}}
+
+= View "SOLL_BUCHUNGEN"
+@@
+-- SOLL-Buchungen befinden sich in der Tabelle "Mitgliedskonto"
+create or replace view SOLL_Buchungen as
+		SELECT NAME, VORNAME, MITGLIEDSNUMMER, max(Austritt) as Austritt
+  			 , SOLL_DATUM
+         , case when quarter(soll_datum)<=2 then concat('1_', year(soll_datum)) else concat('2_', year(soll_datum)) end as Halbjahr
+		     , round(sum(nvl(SOLL_Beitraege                , 0)), 2) as SOLL_Beitraege
+		     , round(sum(nvl(SOLL_Umlagen                  , 0)), 2) as SOLL_Umlagen
+		     , round(sum(nvl(SOLL_BETRAG                   , 0)), 2) as SOLL_GESAMT
+		     , round(sum(nvl(SOLL_Kaution                  , 0)), 2) as SOLL_Kaution
+		     , round(sum(nvl(SOLL_Sanktionen               , 0)), 2) as SOLL_Sanktionen
+		     , round(sum(nvl(SOLL_Arbeitsstunden           , 0)), 2) as SOLL_Arbeitsstunden
+		FROM (
+				SELECT NAME, VORNAME, MITGLIEDSNUMMER, max(Austritt) as Austritt
+				     , SOLL_DATUM
+				     , case when ZWECK like 'Mitglied%' then SOLL_BETRAG end as SOLL_Beitraege
+				     , case when ZWECK like 'Umlage%' then SOLL_BETRAG end as SOLL_Umlagen
+				     , case when ZWECK like 'Sanktion%' or ZWECK like '%Mahn%'  then SOLL_BETRAG end as SOLL_Sanktionen
+				     , case when ZWECK like 'Kaution%' then SOLL_BETRAG end as SOLL_Kaution
+				     , case when ZWECK like 'Arbeits%' then SOLL_BETRAG end as SOLL_Arbeitsstunden
+				     , SOLL_BETRAG
+				FROM (
+						SELECT m.NAME, m.VORNAME, m.EXTERNEMITGLIEDSNUMMER as MITGLIEDSNUMMER, m.AUSTRITT
+						     , mk.ZWECK1 as ZWECK
+				         , nvl(mk.BETRAG, 0) as SOLL_BETRAG
+                 -- !!! Achtung: Einführung Pseudodatum wegen fehlender Soll-Bucung bei Ehrenmitgliedern !!!
+				         , nvl(mk.DATUM, today()) as SOLL_DATUM
+--				         , mk.DATUM as SOLL_DATUM
+						FROM MITGLIEDSKONTO mk
+						   , MITGLIED m
+						WHERE m.ID = mk.MITGLIED (+)
+--              AND name in ('Krumbiegel')
+			      ) t1
+				group by NAME, VORNAME, MITGLIEDSNUMMER, SOLL_DATUM, ZWECK
+		    ) t2
+--where name in ('Dudek', 'Krumbiegel')
+		group by NAME, VORNAME, MITGLIEDSNUMMER, SOLL_DATUM
+		order by NAME, VORNAME
+;
+@@
+
+
+= View "SOLL_Buchungen_grouped"
+@@
+-- per Halbjahr gruppierte Views der Soll-Buchungen
+create or replace view SOLL_Buchungen_grouped as
+SELECT s.NAME
+, s.VORNAME
+, s.MITGLIEDSNUMMER
+, s.AUSTRITT
+, s.HALBJAHR
+, sum(s.SOLL_BEITRAEGE     ) as SOLL_BEITRAEGE      
+, sum(s.SOLL_UMLAGEN       ) as SOLL_UMLAGEN        
+, sum(s.SOLL_GESAMT        ) as SOLL_GESAMT         
+, sum(s.SOLL_KAUTION       ) as SOLL_KAUTION        
+, sum(s.SOLL_SANKTIONEN    ) as SOLL_SANKTIONEN     
+, sum(s.SOLL_ARBEITSSTUNDEN) as SOLL_ARBEITSSTUNDEN  
+FROM SOLL_Buchungen s
+--where name = 'Krenz'
+group by s.NAME, s.VORNAME, s.MITGLIEDSNUMMER, s.AUSTRITT, s.HALBJAHR
+;
+@@
+
+
+= View "HABEN_Buchungen"
+@@
+-- IST-Buchungen befinden sich in der Tabelle "Buchung"
+   -- Zuordnung zum Mitglied erfolgt über Zuordnung zur SOLL-Buchung
+create or replace view HABEN_Buchungen as
+		SELECT NAME, VORNAME, MITGLIEDSNUMMER, max(Austritt) as Austritt
+  			 , SOLL_DATUM
+         , case when quarter(soll_datum)<=2 then concat('1_', year(soll_datum)) else concat('2_', year(soll_datum)) end as Halbjahr
+		     , round(sum(nvl(HABEN_GESAMT                    , 0)), 2) as HABEN_GESAMT
+		     , round(sum(nvl(HABEN_Sanktionen                , 0)), 2) as HABEN_Sanktionen
+		     , round(sum(nvl(HABEN_Kaution                   , 0)), 2) as HABEN_Kaution
+--		     , round(sum(nvl(HABEN_Arbeitsstunden            , 0)), 2) as HABEN_Arbeitsstunden
+		     , round(sum(nvl(HABEN_Spenden                   , 0)), 2) as HABEN_Spenden
+		FROM (
+				SELECT NAME, VORNAME, MITGLIEDSNUMMER, max(Austritt) as Austritt, SOLL_DATUM
+				     , HABEN_Betrag as HABEN_GESAMT
+				     , case when buchungsart = 'Sanktionen' then HABEN_Betrag end as HABEN_Sanktionen
+				     , case when buchungsart = 'Kaution' then HABEN_Betrag end as HABEN_Kaution
+				     , case when buchungsart = 'Arbeitsstunden' then HABEN_Betrag end as HABEN_Arbeitsstunden
+				     , case when lower(buchungsart) like '%spende%' then HABEN_Betrag end as HABEN_Spenden
+				FROM (
+					SELECT m.NAME, m.VORNAME
+				       , m.EXTERNEMITGLIEDSNUMMER as MITGLIEDSNUMMER
+				       , max(m.Austritt) as Austritt
+						   , ba.BEZEICHNUNG as buchungsart
+						   , sum(b.BETRAG) as HABEN_Betrag
+				       , mk.DATUM as SOLL_DATUM
+						FROM MITGLIED m
+                 RIGHT OUTER JOIN MITGLIEDSKONTO mk ON m.ID = mk.MITGLIED
+                 JOIN Buchung b ON b.MITGLIEDSKONTO = mk.ID
+                 JOIN buchungsart ba ON b.BUCHUNGSART = ba.id
+						WHERE 1=1
+						GROUP BY m.NAME, m.VORNAME, ba.BEZEICHNUNG, ba.BEZEICHNUNG, mk.DATUM
+				 		  ) t1
+						group by NAME, VORNAME, MITGLIEDSNUMMER, buchungsart, SOLL_DATUM
+      ) t2
+--      where name = 'Klinger'
+  		group by NAME, VORNAME, MITGLIEDSNUMMER, SOLL_DATUM
+			order by NAME, VORNAME
+;
+@@
+
+
+= View "HABEN_Buchungen_grouped"
+@@
+-- per Halbjahr gruppierte Views der Ist-Buchungen
+create or replace view HABEN_Buchungen_grouped as
+SELECT i.NAME
+, i.VORNAME
+, i.MITGLIEDSNUMMER
+, i.AUSTRITT
+, i.HALBJAHR
+, sum(i.HABEN_GESAMT         ) as HABEN_GESAMT          
+, sum(i.HABEN_SANKTIONEN     ) as HABEN_SANKTIONEN      
+, sum(i.HABEN_KAUTION        ) as HABEN_KAUTION         
+, sum(i.HABEN_SPENDEN        ) as HABEN_SPENDEN         
+FROM HABEN_Buchungen i
+--where name = 'Krenz'
+group by i.NAME, i.VORNAME, i.MITGLIEDSNUMMER, i.AUSTRITT, i.HALBJAHR
+;
+@@

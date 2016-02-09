@@ -1,0 +1,18 @@
+{{parent:Index}}
+{{center}}
+[[wiki:startpage | {{image:adw.jpg}}
+''JVerein-Hilfe für AdW Segeln/Kanu'']]
+
+{{search}}
+
+* ''[[wiki:editpage]]''
+* [[wiki:newpage]]
+//* [[/Testseite]]
+* [[/wiki/ | Hilfe]]
+* [[wiki:shutdown]]
+
+= Zuletzt geändert
+{{listedithistory | length=3}}
+
+= Zuletzt besucht
+{{listviewhistory | length=3}}

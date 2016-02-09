@@ -1,0 +1,30 @@
+{{parent:/JVerein/Benutzung}}
+Inhaltsverzeichnis
+{{toc}}
+
+= Umgang mit Arbeitsstunden
+Laut [[file:/JVerein/Files/beitragsordnung_2014.pdf|Beitragsordnung]] müssen folgende Mitglieder ''keine'' Arbeitsstunden leisten:
+* Mitglieder unter dem 18. und über dem 70. Lebensjahr
+* ruhende Mitgliedschaften
+* fördernde Mitglieder 
+* Ehrenmitglieder
+* Mitglieder mit einer Funktion, z.B. Trainer
+
+Somit müssen folgende Mitglieder Arbeitsstunden leisten:
+* normale und ermäßigte Mitglieder
+* Schüler über 18 Jahre
+* Auszubildende / Studenten A
+
+Die Anzahl der Arbeitsstunden wird jährlich auf der Jahreshauptversammlung festgelegt.
+''Achtung:'' I.d.R. wird für Frauen eine niedrigere Anzahl Arbeitsstunden festgelegt.
+
+== Festlegung der zu leistenden Arbeitsstunden
+Die Anzahl der Arbeitsstunden sowie die Betrag für nicht geleistete Arbeitsstunden wird in JVerein an den Beitragsgruppen definiert. Somit müssen für die jeweils zu leistenden oder nicht zu leistenden Arbeitsstunden entsprechende Gruppen geschaffen werden, d.h. konkret, dass allein für normale Mitglieder 3 Beitragsgruppen entstehen:
+* M-Mitglied, Beitrag 16,00 €/Monat, 18 Arbeitsstunden, 15,00 € für nicht geleistete Stunden
+* MrA-Mitglied mt reduzierten Arbeiststunden (i.d.R. für Frauen), Beitrag 16,00 €/Monat, 12 Arbeitsstunden, 15,00 € für nicht geleistete Stunden
+* MoA-Mitglied ohne Arbeitsstunden (für Senioren oder Funktionsinhaber), Beitrag 16,00 €/Monat, 0 Arbeitsstunden, 0,00 € für nicht geleistete Stunden
+
+
+== Erstellen der Arbeitsstundenblätter
+
+== Abrechnung der geleisteten Arbeitsstunden

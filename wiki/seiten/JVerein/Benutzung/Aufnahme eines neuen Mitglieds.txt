@@ -1,0 +1,89 @@
+{{parent:/JVerein/Benutzung}}
+Inhaltsverzeichnis
+{{toc}}
+
+= Aufnahme eines neuen Mitglieds
+== Stammdaten erfassen
+Erstellen eines neuen Mitglieds durch:
+* Klick auf Menüpunkt "JVerein > Mitglieder"
+* Klick auf Button "neu" (rechts unterhalb der Mitgliedertabelle)
+* Erfassen der Stammdaten im Tab "Stammdaten"
+* Erfassen der Beitragsgruppe durch:
+** Klick auf Tab "Mitgliedschaft"
+** Eingabe der Externen Mitgliedsnummer "12345678" (muss später aktualisiert werden, siehe [[#Mitgliedsnummeraktualisieren|Mitgliedsnummer aktualisieren]])
+* Auswahl der Beitragsgruppe
+* Eingabe des Eintrittsdatums
+* Klick auf Button "Speichern"
+
+''Hinweis:'' Sollte es beim Speichern zu einem Fehler kommen, dann ist höchstwahrscheinlich die externe Mitgliedsnummer bereits vergeben. Das weist auf eine fehlende Aktualisierung der der ext. Mitgliedsnummer bei einem bestehenden Mitglied hin. Zum Speichern muss die ext. Mitgliedsnummer zuerst auf "12345679" geändert werden.
+
+== Mitgliedsnummer aktualisieren
+''Hinweis:'' Die Berechnung der Mitgliedsnummer erfolgt im Tab "Lesefelder". Diese werden erst nach einem erneuten Aufruf des Mitglieds aktualisiert. Deswegen muss wie folgt vorgegangen werden:
+{{br}}
+
+* Klick auf Menüpunkt "JVerein > Mitglieder"
+* Doppelklick auf ein beliebiges, anderes Mitglied in der Liste rechts
+* Suchen und Aufrufen des neuen Mitglieds über die Schnellsuche links unten
+* Klick auf Tab "Lesefelder" 
+* Kopieren der berechneten Mitgliedsnummer aus dem Feld "mitglied_lesefelder_Mitgliedsnummer"
+* Klick auf Tab "Mitgliedschaft"
+* Einfügen der kopierten Mitgliedsnummer in das Feld "externe Mitgliedsnummer" (Dummy-Nummer wird komplett ersetzt)
+
+== Zusatzbeiträge erfassen
+Die Erfassung aller Umlagen und Sanktionen erfolgt im Tab "Zusatzbeiträge" mit folgenden gleichen Angaben:
+* Startdatum: 1.4. oder 1.10.
+* Intervall: halbjährlich
+
+Nachfolgend werden die existierenden Zusatzbeträge beschrieben.
+
+=== Liegeentgelt Kanu
+Für Paddelboote und Surfboards gibt es fixe [[file:/JVerein/Files/beitragsordnung_2014.pdf|Liegeentgelte]] von 4,00 € / Monat.
+
+=== Liegeentgelt für Motor- und Segelboote
+
+''Hinweis:'' Bei Seglern ohne Winterlager wird das Liegeentgeld für 7 Monate berechnet, d.h. 3,5 im 1. Halbjahr und 3,5 im 2. Halbjahr.
+
+
+* Kopieren des berechneten Liegeentgelts aus dem Tab "Lesefelder" (wurde kein Liegeentgeld berechnet, dann Prüfen der Eingaben "Boot: Länge über alles" und "Boot: Breite über alles" im Tab "Zusatzfelder")
+* Wechsel zum Tab "Zusatzbeiträge"
+* Erstellen eines neuen Zusatzbeitrags mit:
+** Bezeichnung: "Umlage: Liegentgelt (monatlich berechneten Liegeentgelts)"
+** Betrag: 6 x berechnetes Liegeentgelt (Berechnung vorab im Windows-Rechner)
+
+=== Mehrwertsteuer auf Bootsliegeentgelt
+Seit 2016 muss eine Mehrversteuer von 7% auf die Bootsliegeentgelte (Motor- und Segelboot, nicht Kanu) abgeführt werden. Deshalb muss eine weitere Zusatzbeitrag erfasst werden:
+* Wechsel zum Tab "Zusatzbeiträge"
+* Erstellen eines neuen Zusatzbeitrags mit:
+** Bezeichnung: "zzgl. 7% MwSt. auf Bootsliegeentgelt" (''Hinweis: '' Der Text muss "MwSt" oder "Mehrwertsteuer" beinhalten, damit er auf dem Datenblatt gesondert ausgewiesen werden kann.)
+** Betrag: 0,07 x halbjährliches Liegeentgelt (Berechnung vorab im Windows-Rechner)
+=== Objektreinigung
+* Erstellen eines neuen Zusatzbeitrags mit:
+** Bezeichnung: "Umlage: Objektreinigung (monatlich 1,50 €)"
+** Betrag: 9,00 €
+
+=== Kojen, Schränke, Fächer
+* Erstellen eines neuen Zusatzbeitrags mit:
+** Bezeichnung: "Umlage: Schränke Nr. mit Gesamtbreite = 50cm x 0,35€/10cm (monatlich 1,75€)"
+** Betrag: 10,50 €
+  
+== Kaution berechnen (nur Erwachsenen)
+Die Kaution bei Erwachsenen betägt einen kompletten Jahresbeitrag inkl. aller Zusatzbeträge. Somit lautet die Formel: 12 x (monatl. Mitgliedsbeitra + alle monatl. Zusatzbeträge).
+* Wechsel zum Tab "Mitgliedskonto"
+* neue Sollbuchung erstellen mit:
+** Zahlungstermin = Eintrittsdatum
+** Bezeichnung: "Kaution (1 Jahresbeitrag)"
+** Betrag: wie oben berechnet
+* Wechsel zum Tab "Vermerke"
+* den Text ''"Ihre Kaution beträgt xxx,yy €. Die Kaution ist bis 14 Tage nach dem Aufnahmedatum zu zahlen."'' im Feld "Vermerk1" erfassen
+* Speichern
+
+''Hinweis:'' Evtl. kann es nützlich sein, eine Wiedervorlage mit dem Rückzahlungstermin der Kaution erstellen.
+
+== Formulare erstellen
+Folgende Formulare müssen bei einem neuen Mitglied erstellt werden:
+* Personalbogen und Formular "Aufnahmebestätigung" als PDF erstellen und an [[udo.tuture@web.de|Udo Schmidt]] sowie [[fritz.hennies@adw-zeuthen.de|Fritz Hennies]] mailen
+* Wenn das neue Mitglied [[/JVerein/Benutzung/Umgang mit Arbeitsstunden|Arbeitsstunden]] leisten muss, dann muss auch ein Arbeitsstundenblatt erstellt und im Verein im Ordner unter der Anmeldung ausgelegt werden
+
+''Hinweis:'' Udo wünscht bei jeder Änderung eine Erstellung der Datenblätter aller Mitglieder in einer einzigen Datei.
+
+== Plausibilitätsprüfung

@@ -1,0 +1,30 @@
+{{parent:/JVerein/Abfragen}}
+
+= Abfrage ausführen
+* [[/JVerein/Abfragen/Execute Query/Starten|Execute Query starten]]
+* Gewünschte Abfrage öffnen:
+** "File > Open" 
+** Auswahl der SQL-Datei aus dem Verzeichnis "C:\Pfad zu\JVerein\Abfragen"
+* Ausführen der Abfrage durch Klick auf grünen Pfeil oder Drücken von "F5"
+
+== Exportieren des Abfrageergbnis nach Excel
+* Klick mit der ''rechten'' Maustaste in die Ergebnistabelle unten
+* Auswahl von "Export Table"
+* Folgende Einstellungen treffen:
+** Aktivieren der Checkbox  "Include column name as first rows"
+** Deaktivieren der Checkbox "Use doble quotes for char/varchar columns"
+** File Format "Excel Spreadsheet"
+** File Path "C:\Pfad zu\JVerein\Abfragen\NameDerAbfrage_Datum.xls"
+** Klick auf Schaltfläche "OK"
+
+== Aufhübschen der Excel-Tabelle
+* Excel öffnen
+* exprotierte Abfrage öffnen
+* gesamte Tabelle markieren mit der Tastenkombination <Strg>+<A>
+* Aktion "Suchen & Ersetzen" aufrufen mit der Tastenkombination <Strg>+<H>
+** Suchen nach: . (Punkt) 
+** Ersetzen durch: , (Komma)
+** Klick auf "Alle ersetzen"
+* Markieren aller Zahlenfelder mit der Maus
+* Klick auf das Währungssymbol zur Darsellung der Zahlen als Beträge
+* Speichern

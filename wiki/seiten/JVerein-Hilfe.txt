@@ -1,0 +1,28 @@
+{{style:headline}}Hilfe zur Nutzung von JVerein bei AdW Segeln/Kanu{{/style}}
+
+[[http://www.jverein.de/|JVerein]] ist eine freie und quelltextoffene Java-Anwendung für Vereine. Für den Versand der Mitgiederdatenblätter per eMail wurde eine eigene Erweiterung entwickelt.
+
+= Glossar
+
+= Inhaltsverzeichnis
+== [[JVerein/Starten]]
+== [[JVerein/Benutzung]]
+=== [[JVerein/Benutzung/Aufnahme eines neuen Mitglieds]]
+=== [[/JVerein/Benutzung/Änderung eines Mitglieds]]
+=== [[/JVerein/Benutzung/Austritt eines Mitglieds]]
+=== [[/JVerein/Benutzung/Import eines Kontoauszugs]]
+=== [[/JVerein/Benutzung/Umgang mit Arbeitsstunden]]
+=== [[/JVerein/Benutzung/Halbjährliche Abrechnung]]
+== [[JVerein/Installation]]
+== [[JVerein/Einstellungen]]
+== [[JVerein/Abfragen]]
+
+= Rechtliche Grundlagen
+== [[file:/JVerein/Files/beitragsordnung_2014.pdf|Beitragsordnung]]
+=== Ergänzungen zur Beitragsordnung:
+* Die Kündigungsfrist bei Kindern beträgt ''1 Monat''.
+* Für Frauen wird eine niedrigere Anzahl an Arbeitsstunden festgelegt.
+== [[file:/JVerein/Files/geschaeftsordnung.pdf|Geschäftsordnung]]
+== [[file:/JVerein/Files/satzung.pdf|Satzung]]
+
+= [[/JVerein/Weiterentwicklung für den AdW]]

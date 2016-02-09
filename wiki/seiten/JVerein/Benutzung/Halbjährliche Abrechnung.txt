@@ -1,0 +1,31 @@
+{{parent:/JVerein/Benutzung}}
+Inhaltsverzeichnis
+{{toc}}
+
+= Halbjährlicher Abrechnungslauf
+
+Gemäß §5 der [[file:/JVerein/Files/beitragsordnung_2014.pdf|Bettragsordnung]] ist die Fälligkeit der Beiträge und Entgelte halbjährlich, jeweils ein Quartal rückwirkend und ein Quartal im Voraus. Die Zahlungstermine snd 01. April / 01. Oktober. 
+
+In JVerein muss zur Erstellung von Sollbuchungen aus den [[/JVerein/Einstellungen/Beitragsgruppen]] und den [[/JVerein/Einstellungen/Zusatzbeträge]]n ein sogenannter Abrechnungslauf durchgeführt werden. Dieser muss somit 2 x pro Jahr jeweils ''vor'' dem Zahlungsterminen erfolgen, damit die Fälligkeit auf den jeweiligen Zahlungstermin gesetzt werden kann.
+
+''ACHTUNG:'' Jeweils im 1. Halbjahr werden die [[/JVerein/Benutzung/Umgang mit Arbeitsstunden#AbrechnungdergeleistetenArbeitsstunden|geleisteten Arbeitsstunden abgerechnet]], d.h. das muss ''vor'' dem Abrechnungslauf erfolgen.
+
+== Veraltete Zusatzbeträge entfernen
+Vor dem Abrechnungslauf sollen veraltete Zusatzbeträge, z.B. die automatisch erstellten Zusatzbeträge für fehlende Arbeitsstunden gelöscht werden. Das erfolgt am einfachsten durch:
+* Klick auf Menüpunkt "JVerein > Zusatzbeträge"
+* Sortieren nach Intervall, damit "Kein" oben steht
+  * oder Sortieren nach Endedatum
+* Klick mit rechter Maustaste auf zu löschenden Eintrag
+* Klick auf Löschen
+* Klick auf Button "Ja"
+
+== Erstellen der Zusatzbeträge für nicht geleistete Arbeitsstunden
+
+== Vorgehen zur Durchführung eines Abrechnungslaufs
+* Menüpunkt "Abrechnung > Abrechnung"
+* Modus: halbjährlich
+* Fälligkeit Sepa (Erst-/Einzel-Lastschrift): Zahlungstermin, d.h. 1.4. bzw. 1.10.
+* Stichtag: Zahlungstermin, d.h. 1.4. bzw. 1.10.
+* Zahlungsgrund: "Mitgliedsbeitrag: 1./2. Halbjahr 20??"
+* Zusatzbeträge: ja
+* Abbuchungsausgabe: Hibiscus

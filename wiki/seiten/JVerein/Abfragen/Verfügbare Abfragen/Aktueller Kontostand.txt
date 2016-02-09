@@ -1,0 +1,60 @@
+{{parent:/JVerein/Abfragen}}
+
+= Aktueller Kontostand aller Mitglieder
+Dieser Report dient dem Vergleich mit den Daten von Udo Schmidt. Die Abfrage ist aufgrund der Anforderungen sehr lang geworden.
+
+Damit die Abfrage überhaupt funktioniert, müssen zuerst [[/JVerein/Abfragen/Verfügbare Abfragen/Aktueller Kontostand/4 Hilfs-Views]] eingespielt werden. Das ist ein einmaliger Vorgang und muss nicht für jede Abfrage wiederholt werden.
+
+@@
+-- ACHTUNG: die Halbjahre müssen in der Abfrage korrekt 2x ausgewählt werden!!!
+-- Offene Forderungen auf Basis von Views - diese müssen vorher eingespielt sein
+-- neu: nur aktuelles Halbjahr und vorige Halbjahre als offene Forderung
+SELECT s.Name
+     , s.Vorname
+     , s.Mitgliedsnummer
+     , s.austritt
+     , nvl(o.Gesamt_DIFF, 0)                             as offene_Forderungen
+     , nvl(s.SOLL_Beitraege, 0)                          as HJ_SOLL_Beitraege
+     , nvl(s.SOLL_Umlagen, 0)                            as HJ_SOLL_Umlagen
+     , round(nvl(s.SOLL_Beitraege, 0) + nvl(s.SOLL_Umlagen, 0), 2) as HJ_SOLL_Beitraege_Umlagen
+     , nvl(s.SOLL_GESAMT, 0)                             as HJ_SOLL_GESAMT
+     , nvl(i.HABEN_GESAMT, 0)                            as HJ_HABEN_GESAMT
+     , round(nvl(i.HABEN_GESAMT, 0) - nvl(s.SOLL_GESAMT, 0), 2)  as HJ_Diff_GESAMT
+     , round(nvl(i.HABEN_GESAMT, 0) - nvl(s.SOLL_GESAMT, 0) + nvl(o.Gesamt_DIFF, 0), 2) as Gesamt_DIFF
+     , nvl(i.HABEN_Spenden, 0)                           as Spenden
+     , s.SOLL_Arbeitsstunden
+     , s.SOLL_Sanktionen
+     , s.SOLL_Kaution 
+     , nvl(o.HABEN_Kaution, 0) as HABEN_Kaution
+FROM SOLL_Buchungen_grouped s
+   , HABEN_Buchungen_grouped i
+-- Offene Forderungen bzw. Guthaben aus allen vorherigen Zahlungszeiträumen
+   , (SELECT s.NAME
+					, s.VORNAME
+					, s.MITGLIEDSNUMMER
+					, s.AUSTRITT
+			    , round(sum(nvl(i.HABEN_GESAMT, 0) - nvl(s.SOLL_GESAMT, 0)), 2) as Gesamt_DIFF
+			    , round(sum(i.HABEN_Kaution), 2) as HABEN_Kaution
+			FROM SOLL_Buchungen_grouped s
+			   , HABEN_Buchungen_grouped i
+			WHERE s.MITGLIEDSNUMMER = i.MITGLIEDSNUMMER (+)
+			  and s.HALBJAHR = i.HALBJAHR (+)
+-- !!! vorige Halbjahre berücksichtigen !!!
+			  and s.HALBJAHR in ('2_2014')
+			  group by s.NAME, s.VORNAME, s.MITGLIEDSNUMMER
+			) o
+WHERE s.MITGLIEDSNUMMER = i.MITGLIEDSNUMMER (+)
+  and s.HALBJAHR = i.HALBJAHR (+)
+  and s.MITGLIEDSNUMMER = o.MITGLIEDSNUMMER (+)
+-- aktuelles Halbjahr
+  and s.halbjahr = '1_2015'
+-- Austritt berücksichtigen, wenn DIFF_GESAMT = 0,00 €
+  and (s.austritt is null 
+       or Gesamt_DIFF != 0
+       or (substr(s.halbjahr, 3, 4) = CAST(year(s.austritt) as CHAR)) 
+       or year(s.austritt) = year(CURRENT_DATE()) )
+--and s.name in ('Dudek', 'Krenz', 'Hennies', 'Witzmann', 'Klinger', 'Heukeroth')
+--and s.name in ('Witzmann')
+order by s.Name, s.Vorname
+;
+@@
