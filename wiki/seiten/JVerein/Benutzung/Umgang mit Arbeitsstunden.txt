@@ -27,6 +27,32 @@ Die Anzahl der Arbeitsstunden sowie die Betrag für nicht geleistete Arbeitsstun
 
 == Erstellen der Arbeitsstundenblätter
 
-== Abrechnung der geleisteten Arbeitsstunden
+Die Arbeitsstundenblätter können direkt aus JVerein wie folgt erstellt werden:
+* Voraussetzung: die neu festgelegten Stundenzahlen müssen in den [[/JVerein/Einstellungen/Beitragsgruppen]] aktualisiert worden sein.
+* Aufruf Menü "JVerein > Mitglieder"
+* Filter einstellen "Mitgliedschaft: angemeldet"
+* Ergbenistabelle sortieren nach Beitragsgruppe
+* Markieren der Zeilen mit den Beitragsgruppen, die Arbeitsstunden leisten müssen (Strg gedrückt halten und mit der Maus Zeile anklicken)
+* Sortierung ändern auf "Name" (damit werden die Arbeisstundenblätter nach Namen sortiert erstellt)
+* Klick mit der rechten Maustaste auf eine der Markierungen
+* Klick auf Menüpunkt "Arbeitsstundenblatt"
+
+Es wird eine PDF-Datei mit allen Arbeitsstundenblättern erzeugt. Diese kann gespeichert und muss dann ausgedruckt werden.
+
+''Hinweis:'' Der Ordner für die Arbeitsstundenblätter hat 4 Klemmstellen, d.h. die Blätter müssen mit 4 Löchern gelocht werden (mit normalen Locher jeweils von oben und von unten in der Stellung "888" bzw. "3x8").== Abrechnung der geleisteten Arbeitsstunden
 * im Tab "Arbeitseinsatz" eintragen der geleisteten Arbeitsstunden
 * für den Abrechnungslauf zum 1.4. müssen im Menü "Arbeisteinsätze prüfen" mit dem Button "Zusatzbeträge generieren" die Sanktionen für nicht geleistete Arbeitsstunden generiert werden
+
+== Abrechnung der Arbeitsstunden
+
+Die Abrechnung der Arbeitsstunden erfolgt so:
+* Aufsummieren der von den Mitgliedern in die Arbeitsstundenblätter eingetragenen Arbeitsstunden
+* Eintragen der Summe in den Tab "Arbeitseinsatz" des Mitglieds
+  * Datum des Arbeitseinsatzes ist der 31.12. des betreffenden Jahres 
+* Aufruf des Menüpunkts "JVereien > Arbeitseinsätze prüfen"
+* Auswahl:
+  * Jahr: betreffendes Jahr
+  * Auswertung: Minderleistung
+  * Klick auf "Suchen"
+* Zusatzbeträge generieren durch Klick auf Button "Zusatzbeträge generieren"
+* Kontrolle / Reduzierung der Zusatzbeträge von Mitgliedern, die erst im Laufe des Jahres eingetreten sind.

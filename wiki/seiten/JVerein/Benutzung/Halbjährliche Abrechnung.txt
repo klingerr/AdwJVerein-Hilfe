@@ -21,6 +21,9 @@ Vor dem Abrechnungslauf sollen veraltete Zusatzbeträge, z.B. die automatisch er
 
 == Erstellen der Zusatzbeträge für nicht geleistete Arbeitsstunden
 
+siehe: [[/JVerein/Benutzung/Umgang mit Arbeitsstunden#AbrechnungderArbeitsstunden|Abrechnung der Arbeitsstunden]]
+
+
 == Vorgehen zur Durchführung eines Abrechnungslaufs
 * Menüpunkt "Abrechnung > Abrechnung"
 * Modus: halbjährlich

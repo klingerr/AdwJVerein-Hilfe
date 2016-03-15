@@ -41,14 +41,17 @@ Für Paddelboote und Surfboards gibt es fixe [[file:/JVerein/Files/beitragsordnu
 
 === Liegeentgelt für Motor- und Segelboote
 
-''Hinweis:'' Bei Seglern ohne Winterlager wird das Liegeentgeld für 7 Monate berechnet, d.h. 3,5 im 1. Halbjahr und 3,5 im 2. Halbjahr.
-
+''Hinweis 1:'' Bei Seglern ohne Winterlager wird das Liegeentgeld für 7 Monate berechnet, d.h. 3,5 im 1. Halbjahr und 3,5 im 2. Halbjahr.
+''Hinweis 2:'' Ab dem 1. Halbjahr 2016 wurde der Wasserfaktor für das Liegentgelt von 1,65€ auf 1,55€ gesenkt. 
 
 * Kopieren des berechneten Liegeentgelts aus dem Tab "Lesefelder" (wurde kein Liegeentgeld berechnet, dann Prüfen der Eingaben "Boot: Länge über alles" und "Boot: Breite über alles" im Tab "Zusatzfelder")
 * Wechsel zum Tab "Zusatzbeiträge"
-* Erstellen eines neuen Zusatzbeitrags mit:
+* Erstellen eines 1. neuen Zusatzbeitrags mit:
 ** Bezeichnung: "Umlage: Liegentgelt (monatlich berechneten Liegeentgelts)"
 ** Betrag: 6 x berechnetes Liegeentgelt (Berechnung vorab im Windows-Rechner)
+* Erstellen eines 2. neuen Zusatzbeitrags mit:
+** Bezeichnung: "zzgl. 7% MwSt. auf Bootsliegeentgelt"
+** Betrag: 0,07 x berechnetes Halbjahres-Liegeentgelt (Berechnung vorab im Windows-Rechner)
 
 === Mehrwertsteuer auf Bootsliegeentgelt
 Seit 2016 muss eine Mehrversteuer von 7% auf die Bootsliegeentgelte (Motor- und Segelboot, nicht Kanu) abgeführt werden. Deshalb muss eine weitere Zusatzbeitrag erfasst werden:

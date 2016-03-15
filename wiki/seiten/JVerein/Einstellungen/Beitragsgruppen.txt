@@ -1,1 +1,3 @@
 = Beitragsgruppen
+
+Menü "JVerein > Administration > Einstellungen > Beitragsgruppen"
